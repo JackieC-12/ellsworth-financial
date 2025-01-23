@@ -1,20 +1,20 @@
 // import { NavLink } from "react-router-dom";
 import ProfileButton from "./ProfileButton";
 import "./Navigation.css";
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure, DisclosureButton } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 const navigation = [
-  { name: 'About Us', current: false },
-  { name: 'Education', current: false },
-  { name: 'Services', current: false },
-  { name: 'Advisors', current: false},
-  { name: 'Blog', current: false},
-  { name: 'Contact Us', current: false}
+  { name: 'About Us', current: false, href:"/about"},
+  { name: 'Education', current: false, href:"/education"},
+  { name: 'Services', current: false, href:"/services"},
+  { name: 'Advisors', current: false, href:"/advisors"},
+  { name: 'Blog', current: false, href:"/blog"},
+  { name: 'Contact Us', current: false, href:"/contact-us"}
 ]
 
 function Navigation() {
@@ -33,11 +33,14 @@ function Navigation() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
+              <a href="/">
               <img
                 alt="Your Company"
                 src="logo.jpg"
                 className="h-8 w-auto hover:cursor-pointer"
+                href="/"
               />
+              </a>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
