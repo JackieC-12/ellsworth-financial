@@ -7,7 +7,7 @@ const links = [
 
 function HomePage() {
     return (
-        <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32">
+        <div className="relative isolate bg-white py-24 sm:py-32 overflow-visible">
           <img
             alt=""
             src="background.jpg"

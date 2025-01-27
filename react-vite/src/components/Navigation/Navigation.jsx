@@ -1,7 +1,7 @@
 // import { NavLink } from "react-router-dom";
 import ProfileButton from "./ProfileButton";
 import "./Navigation.css";
-import { Disclosure, DisclosureButton } from '@headlessui/react'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 function classNames(...classes) {
@@ -19,7 +19,7 @@ const navigation = [
 
 function Navigation() {
   return (
-<Disclosure as="nav" className="bg-white-800">
+<Disclosure as="nav" className="bg-white-800 sticky top-0 z-10 overflow-visible">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -77,7 +77,7 @@ function Navigation() {
         </div>
       </div>
 
-      {/* <DisclosurePanel className="sm:hidden">
+      <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {navigation.map((item) => (
             <DisclosureButton
@@ -94,7 +94,7 @@ function Navigation() {
             </DisclosureButton>
           ))}
         </div>
-      </DisclosurePanel> */}
+      </DisclosurePanel>
     </Disclosure>
   );
 }
