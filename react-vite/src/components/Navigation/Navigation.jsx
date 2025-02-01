@@ -1,7 +1,7 @@
 // import { NavLink } from "react-router-dom";
-import ProfileButton from "./ProfileButton";
+// import ProfileButton from "./ProfileButton";
 import "./Navigation.css";
-import { Disclosure, DisclosureButton } from '@headlessui/react'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 function classNames(...classes) {
@@ -10,7 +10,6 @@ function classNames(...classes) {
 
 const navigation = [
   { name: 'About Us', current: false, href:"/about"},
-  { name: 'Education', current: false, href:"/education"},
   { name: 'Services', current: false, href:"/services"},
   { name: 'Advisors', current: false, href:"/advisors"},
   { name: 'Blog', current: false, href:"/blog"},
@@ -61,7 +60,7 @@ function Navigation() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
+            <a>Log in Here</a>
             {/* <button
               type="button"
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -72,12 +71,12 @@ function Navigation() {
             </button> */}
 
             {/* Profile dropdown */}
-            <ProfileButton />
+            {/* <ProfileButton /> */}
           </div>
         </div>
       </div>
 
-      {/* <DisclosurePanel className="sm:hidden">
+      <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {navigation.map((item) => (
             <DisclosureButton
@@ -94,7 +93,7 @@ function Navigation() {
             </DisclosureButton>
           ))}
         </div>
-      </DisclosurePanel> */}
+      </DisclosurePanel>
     </Disclosure>
   );
 }

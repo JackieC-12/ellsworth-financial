@@ -2,7 +2,6 @@ import { createBrowserRouter } from 'react-router-dom';
 import LoginFormPage from '../components/LoginFormPage';
 import SignupFormPage from '../components/SignupFormPage';
 import AboutPage from '../components/AboutPage'
-import EducationPage from '../components/EducationPage'
 import SchedulePage from '../components/SchedulePage'
 import ServicesPage from '../components/ServicesPage'
 import AdvisorsPage from '../components/AdvisorsPage'
@@ -24,10 +23,40 @@ export const router = createBrowserRouter([
         path: "/about",
         element: <AboutPage />,
       },
-      {
-        path: "/education",
-        element: <EducationPage />
-      },
+      // {
+      //   path: "/education",
+      //   children: [
+      //     {
+      //       index: true,
+      //       element: <EducationPage />
+      //     },
+      //     {
+      //       path: '/education/life-insurance',
+      //       element: <LifeInsurancePage />
+      //     },
+      //     // {
+      //     //   path: '/annuities',
+      //     //   element: <AnnuitiesPage />
+      //     // },
+      //     // {
+      //     //   path: '/ira',
+      //     //   element: <IRAPage />
+      //     // },
+      //     // {
+      //     //   path: '/hsa',
+      //     //   element: <HSAPage />
+      //     // },
+      //     // {
+      //     //   path: '/structured-notes',
+      //     //   element: <StructuredNotesPage />
+      //     // },
+      //     // {
+      //     //   path: '/calculators',
+      //     //   element: <CalculatorsPage />
+      //     // }
+      //   ]
+      //   // element: <EducationPage />,
+      // },
       {
         path: "/services",
         element: <ServicesPage />
