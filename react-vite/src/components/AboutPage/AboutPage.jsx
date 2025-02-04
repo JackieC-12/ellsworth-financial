@@ -10,8 +10,31 @@ function AboutPage() {
                     quis cursus purus euismod ut. Pellentesque hendrerit sit amet lorem non fringilla. Praesent ultricies feugiat libero, in
                     vehicula libero rhoncus quis. Proin rhoncus felis ex, id porttitor risus vehicula sed. Vestibulum sed efficitur nunc. Nunc sit
                     amet vulputate mi. Nullam auctor est sed sollicitudin porttitor. </p>
-            </div>
-          <div className="mt-10 mx-auto max-w-7xl px-6 lg:px-8">
+              </div>
+
+              <div className="mx-auto mt-12 max-w-7xl px-6 lg:px-8">
+                <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center">Our Story</p>
+                <p className="mt-6 text-lg/8 text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi turpis, finibus id elit a, euismod pellentesque nisi.
+                    Aliquam mattis tellus et lectus tincidunt dictum. Nullam porttitor tincidunt ante sed dignissim. Donec eu blandit justo.
+                    Quisque vitae dignissim augue. Nam id odio vehicula, tempus augue non, porttitor eros. Proin efficitur malesuada metus,
+                    quis cursus purus euismod ut. Pellentesque hendrerit sit amet lorem non fringilla. Praesent ultricies feugiat libero, in
+                    vehicula libero rhoncus quis. Proin rhoncus felis ex, id porttitor risus vehicula sed. Vestibulum sed efficitur nunc. Nunc sit
+                    amet vulputate mi. Nullam auctor est sed sollicitudin porttitor. </p>
+                    <p className="mt-6 text-lg/8 text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi turpis, finibus id elit a, euismod pellentesque nisi.
+                    Aliquam mattis tellus et lectus tincidunt dictum. Nullam porttitor tincidunt ante sed dignissim. Donec eu blandit justo.
+                    Quisque vitae dignissim augue. Nam id odio vehicula, tempus augue non, porttitor eros. Proin efficitur malesuada metus,
+                    quis cursus purus euismod ut. Pellentesque hendrerit sit amet lorem non fringilla. </p>
+                    <p className="mt-6 text-lg/8 text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi turpis, finibus id elit a, euismod pellentesque nisi.
+                    Aliquam mattis tellus et lectus tincidunt dictum. Nullam porttitor tincidunt ante sed dignissim. Donec eu blandit justo.
+                    Quisque vitae dignissim augue. Nam id odio vehicula, tempus augue non, porttitor eros. Proin efficitur malesuada metus,
+                    quis cursus purus euismod ut. Pellentesque hendrerit sit amet lorem non fringilla. Nam id odio vehicula, tempus augue non, porttitor eros. Proin efficitur malesuada metus,
+                    quis cursus purus euismod ut. Pellentesque hendrerit sit amet lorem non fringilla.</p>
+              </div>
+
+          <div className="mt-12 mx-auto max-w-7xl px-6 lg:px-8">
             {/* <br></br> */}
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pt-4 lg:pr-8">

@@ -1,8 +1,8 @@
 const links = [
-    { name: 'Life Insurance', desc: 'Principal-protected living & death benefits in equity-indexed accounts.', href: '#' },
-    { name: 'Annuities', desc: 'High-bonus lump-sum products to secure long-term retirement funds.', href: '#' },
-    { name: 'Managed Assets', desc: 'Stocks, bonds, ETFs, & custom notes in balanced portfolios.', href: '#' },
-    { name: 'Estate Planning', desc: 'Wills, trusts, property, copyright, trademark, & personal archives.', href: '#' },
+    { name: 'Products', desc: 'Principal-protected living & death benefits in equity-indexed accounts.', href: '#' },
+    { name: 'Life Events', desc: 'High-bonus lump-sum products to secure long-term retirement funds.', href: '#' },
+    { name: 'Tools', desc: 'Stocks, bonds, ETFs, & custom notes in balanced portfolios.', href: '#' },
+    { name: 'Placeholder', desc: 'Wills, trusts, property, copyright, trademark, & personal archives.', href: '#' },
   ]
 
 function HomePage() {
@@ -71,7 +71,7 @@ function HomePage() {
                 ))}
               </dl>
           </div>
-          <div className="bg-white relative">
+          <div className="bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center py-12">Our Mission</p>
                 <p className="mt-6 text-lg/8 text-gray-600">

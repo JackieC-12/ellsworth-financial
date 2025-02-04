@@ -10,22 +10,22 @@ function classNames(...classes) {
 }
 
 const servicesOptions = [
-  { name: 'Retirement Planning', href:"/services/retirement-planning"},
-  { name: 'Savings and Investments', href:"/services/savings"},
-  { name: 'Real Estate', href:"/services/real-estate"}
+  { name: 'Products', href:"/services/retirement-planning"},
+  { name: 'Life Events', href:"/services/savings"},
+  { name: 'Tools', href:"/services/real-estate"}
 ]
 
 const navigation = [
-  { name: 'About Us', current: false, href:"/about"},
+  { name: 'About', current: false, href:"/about"},
   { name: 'Services', current: false, href:"/services", dropdown: true, options: servicesOptions},
   { name: 'Advisors', current: false, href:"/advisors"},
   { name: 'Blog', current: false, href:"/blog"},
-  { name: 'Contact Us', current: false, href:"/contact-us"}
+  { name: 'Contact', current: false, href:"/contact-us"}
 ]
 
 function Navigation() {
   return (
-<Disclosure as="nav" className="sticky bg-white top-0 shadow-xl">
+<Disclosure as="nav" className="sticky bg-white top-0 shadow-xl width-100">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -56,7 +56,7 @@ function Navigation() {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'text-white-500' :'text-black-500 hover:bg-gray-700 hover:text-white hover:cursor-pointer mt-1',
+                      item.current ? 'text-white-500' :'text-black-500 hover:cursor-pointer mt-1',
                       'rounded-md px-3 py-2 text-sm font-medium',
                     )}
                   >
