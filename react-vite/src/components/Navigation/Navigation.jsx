@@ -3,14 +3,21 @@
 import "./Navigation.css";
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Dropdown from './Dropdown'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+const servicesOptions = [
+  { name: 'Retirement Planning', href:"/services/retirement-planning"},
+  { name: 'Savings and Investments', href:"/services/savings"},
+  { name: 'Real Estate', href:"/services/real-estate"}
+]
+
 const navigation = [
   { name: 'About Us', current: false, href:"/about"},
-  { name: 'Services', current: false, href:"/services"},
+  { name: 'Services', current: false, href:"/services", dropdown: true, options: servicesOptions},
   { name: 'Advisors', current: false, href:"/advisors"},
   { name: 'Blog', current: false, href:"/blog"},
   { name: 'Contact Us', current: false, href:"/contact-us"}
@@ -18,7 +25,7 @@ const navigation = [
 
 function Navigation() {
   return (
-<Disclosure as="nav" className="bg-white-800">
+<Disclosure as="nav" className="sticky bg-white top-0 shadow-xl">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -36,12 +43,12 @@ function Navigation() {
               <img
                 alt="Your Company"
                 src="logo.jpg"
-                className="h-8 w-auto hover:cursor-pointer"
+                className="h-11 w-auto hover:cursor-pointer"
                 href="/"
               />
               </a>
             </div>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden sm:ml-6 sm:block flex">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
                   <a
@@ -49,18 +56,27 @@ function Navigation() {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-black hover:cursor-pointer' : 'text-black-500 hover:bg-gray-700 hover:text-white hover:cursor-pointer',
+                      item.current ? 'text-white-500' :'text-black-500 hover:bg-gray-700 hover:text-white hover:cursor-pointer mt-1',
                       'rounded-md px-3 py-2 text-sm font-medium',
                     )}
                   >
-                    {item.name}
+                    {item.dropdown ?
+                    <Dropdown
+                      item={{ name: item.name, options: item.options }}
+                      />
+                      : item.name}
                   </a>
                 ))}
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <a>Log in Here</a>
+            <div className="justify-self-center">
+              <a href='https://app.rightcapital.com/account/login'>
+                <button>Log In</button>
+              </a>
+            </div>
+          {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <a>Log In</a> */}
             {/* <button
               type="button"
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -72,7 +88,7 @@ function Navigation() {
 
             {/* Profile dropdown */}
             {/* <ProfileButton /> */}
-          </div>
+          {/* </div> */}
         </div>
       </div>
 

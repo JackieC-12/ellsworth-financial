@@ -7,11 +7,11 @@ const links = [
 
 function HomePage() {
     return (
-        <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32">
+        <div className="static py-24 sm:py-32">
           <img
             alt=""
-            src="background.jpg"
-            className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center opacity-30"
+            src="https://media.istockphoto.com/id/615398376/photo/new-york-city-nyc-usa.webp?s=2048x2048&w=is&k=20&c=kGWBwUV37-YTNvgKRS0m0zHSwJ4xLmdg9eQaFRhmYoE="
+            className="absolute isolate overflow-hidden inset-0 -z-10 size-full object-cover object-right md:object-center opacity-60"
           />
           <div
             aria-hidden="true"
@@ -46,8 +46,8 @@ function HomePage() {
             </div>
             <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-black sm:grid-cols-2 md:flex lg:gap-x-10">
-              <a href="/schedule">
-                GET STARTED -
+              <a href="/schedule" className="w-64 h-12">
+                <button className="h-full w-full justify-center rounded-lg bg-blue-600 px-3 py-1.5 font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Schedule Today</button>
               </a>
                 {/* {links.map((link) => (
                   <a key={link.name} href={link.href}>
@@ -55,21 +55,56 @@ function HomePage() {
                   </a>
                 ))} */}
               </div>
-              <strong className="text-black"> Our Services </strong>
-              <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+              {/* <strong className="text-black"> Our Services </strong> */}
+            </div>
+          </div>
+          <div className="bg-white inset shadow-xl">
+              <dl className="mt-16 py-8 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4 bg-white mx-auto max-w-7xl">
                 {links.map((link) => (
-                  <div key={link.name} className="flex flex-col-reverse gap-1">
-                    <a className="text-base/7 text-black" href={link.href}>
+                  <div key={link.name} className="flex flex-col-reverse gap-1 rounded-lg px-3 shadow-xs">
+                    <a className="text-base/7" href={link.href}>
                         Learn More
                     </a>
-                    <dd>{link.desc}</dd>
-                    <dt className="text-base/7 text-black">{link.name}</dt>
+                    <dd className="">{link.desc}</dd>
+                    <dt className="text-base/7">{link.name}</dt>
                   </div>
                 ))}
               </dl>
+          </div>
+          <div className="bg-white relative">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center py-12">Our Mission</p>
+                <p className="mt-6 text-lg/8 text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi turpis, finibus id elit a, euismod pellentesque nisi.
+                    Aliquam mattis tellus et lectus tincidunt dictum. Nullam porttitor tincidunt ante sed dignissim. Donec eu blandit justo.
+                    Quisque vitae dignissim augue. Nam id odio vehicula, tempus augue non, porttitor eros. Proin efficitur malesuada metus,
+                    quis cursus purus euismod ut. Pellentesque hendrerit sit amet lorem non fringilla. Praesent ultricies feugiat libero, in
+                    vehicula libero rhoncus quis. Proin rhoncus felis ex, id porttitor risus vehicula sed. Vestibulum sed efficitur nunc. Nunc sit
+                    amet vulputate mi. Nullam auctor est sed sollicitudin porttitor. </p>
+                    <p className="mt-6 text-lg/8 text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi turpis, finibus id elit a, euismod pellentesque nisi.
+                    Aliquam mattis tellus et lectus tincidunt dictum. Nullam porttitor tincidunt ante sed dignissim. Donec eu blandit justo.
+                    Quisque vitae dignissim augue. Nam id odio vehicula, tempus augue non, porttitor eros. Proin efficitur malesuada metus,
+                    quis cursus purus euismod ut. Pellentesque hendrerit sit amet lorem non fringilla. Praesent ultricies feugiat libero, in
+                    vehicula libero rhoncus quis. Proin rhoncus felis ex, id porttitor risus vehicula sed. Vestibulum sed efficitur nunc. Nunc sit
+                    amet vulputate mi. Nullam auctor est sed sollicitudin porttitor. </p>
+                    <p className="mt-6 text-lg/8 text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi turpis, finibus id elit a, euismod pellentesque nisi.
+                    Aliquam mattis tellus et lectus tincidunt dictum. Nullam porttitor tincidunt ante sed dignissim. Donec eu blandit justo.
+                    Quisque vitae dignissim augue. Nam id odio vehicula, tempus augue non, porttitor eros. Proin efficitur malesuada metus,
+                    quis cursus purus euismod ut. Pellentesque hendrerit sit amet lorem non fringilla. Praesent ultricies feugiat libero, in
+                    vehicula libero rhoncus quis. Proin rhoncus felis ex, id porttitor risus vehicula sed. Vestibulum sed efficitur nunc. Nunc sit
+                    amet vulputate mi. Nullam auctor est sed sollicitudin porttitor. </p>
+                    <p className="mt-6 text-lg/8 text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi turpis, finibus id elit a, euismod pellentesque nisi.
+                    Aliquam mattis tellus et lectus tincidunt dictum. Nullam porttitor tincidunt ante sed dignissim. Donec eu blandit justo.
+                    Quisque vitae dignissim augue. Nam id odio vehicula, tempus augue non, porttitor eros. Proin efficitur malesuada metus,
+                    quis cursus purus euismod ut. Pellentesque hendrerit sit amet lorem non fringilla. Praesent ultricies feugiat libero, in
+                    vehicula libero rhoncus quis. Proin rhoncus felis ex, id porttitor risus vehicula sed. Vestibulum sed efficitur nunc. Nunc sit
+                    amet vulputate mi. Nullam auctor est sed sollicitudin porttitor. </p>
             </div>
           </div>
-        </div>
+          </div>
       )
 }
 
