@@ -1,5 +1,6 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import "./Dropdown.css";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -7,19 +8,17 @@ function classNames(...classes) {
 
 export default function Dropdown({ item }) {
   return (
-    <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <MenuButton className="">
+    <Menu as="div" className="text-black-500 hover:cursor-pointer mt-1 rounded-md font-medium hover:text-blue-600">
+        <MenuButton className="px-4 py-2">
           {item.name}
           <ChevronDownIcon aria-hidden="true" className="inline -mr-1 size-5 text-gray-400" />
         </MenuButton>
-      </div>
 
       <MenuItems
         transition
+        modal={false}
         className="absolute mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
       >
-        {/* <div className="py-1 static"> */}
                 {item.options.map((option) => (
                     <MenuItem
                     key={option.name}>
@@ -34,41 +33,6 @@ export default function Dropdown({ item }) {
                   </a>
                     </MenuItem>
                 ))}
-          {/* <MenuItem>
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
-            >
-              Account settings
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
-            >
-              Support
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
-            >
-              License
-            </a>
-          </MenuItem>
-          <form action="#" method="POST">
-            <MenuItem>
-              <button
-                type="submit"
-                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
-              >
-                Sign out
-              </button>
-            </MenuItem>
-          </form> */}
-        {/* </div> */}
       </MenuItems>
     </Menu>
   )

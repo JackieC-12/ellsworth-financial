@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <div className="bg-gray-700">
+        <div className="bg-gray-700 fixed bottom-0 w-full">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="flex items-start justify-start space-x-12">
                         <p className="text-14px text-white">Copyright Ellsworth Financial 2023 -- All Rights Reserved</p>

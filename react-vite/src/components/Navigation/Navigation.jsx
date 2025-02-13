@@ -4,28 +4,30 @@ import "./Navigation.css";
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Dropdown from './Dropdown'
+import ContactUs from './ContactUs'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 const servicesOptions = [
-  { name: 'Products', href:"/services/retirement-planning"},
-  { name: 'Life Events', href:"/services/savings"},
-  { name: 'Tools', href:"/services/real-estate"}
+  { name: 'Overview', href:"/services"},
+  { name: 'Financial Planning', href:"/services/financial-planning"},
+  { name: 'Life Insurance', href:"/services/life-insurance"},
+  { name: 'Asset Management', href:"/services/asset-management"}
 ]
 
 const navigation = [
-  { name: 'About', current: false, href:"/about"},
+  { name: 'Our Firm', current: false, href:"/about"},
   { name: 'Services', current: false, href:"/services", dropdown: true, options: servicesOptions},
-  { name: 'Advisors', current: false, href:"/advisors"},
   { name: 'Blog', current: false, href:"/blog"},
   { name: 'Contact', current: false, href:"/contact-us"}
 ]
 
 function Navigation() {
   return (
-<Disclosure as="nav" className="sticky bg-white top-0 shadow-xl width-100">
+    <Disclosure as="nav" className="sticky bg-white top-0 shadow-xl w-full">
+      <ContactUs />
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -49,46 +51,31 @@ function Navigation() {
               </a>
             </div>
             <div className="hidden sm:ml-6 sm:block flex">
-              <div className="flex space-x-4">
+              <div className="relative flex space-x-3">
                 {navigation.map((item) => (
+                  item.dropdown ? <Dropdown key={item.name} item={{ name: item.name, options: item.options }} />
+                  :
                   <a
                     key={item.name}
-                    href={item.href}
+                    href={ item.href }
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'text-white-500' :'text-black-500 hover:cursor-pointer mt-1',
-                      'rounded-md px-3 py-2 text-sm font-medium',
-                    )}
-                  >
-                    {item.dropdown ?
-                    <Dropdown
-                      item={{ name: item.name, options: item.options }}
-                      />
-                      : item.name}
-                  </a>
+                      'text-black-500 hover:cursor-pointer mt-1', 'rounded-md px-4 py-2 font-medium', 'hover:text-blue-600'
+                    )}>{item.name}</a>
                 ))}
               </div>
             </div>
           </div>
+            {/* <div className="justify-self-center px-4">
+              <a href='/schedule'>
+                <button>Schedule a Meeting</button>
+              </a>
+            </div> */}
             <div className="justify-self-center">
               <a href='https://app.rightcapital.com/account/login'>
                 <button>Log In</button>
               </a>
             </div>
-          {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <a>Log In</a> */}
-            {/* <button
-              type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-            >
-              <span className="absolute -inset-1.5" />
-              <span className="sr-only">View notifications</span>
-              <BellIcon aria-hidden="true" className="size-6" />
-            </button> */}
-
-            {/* Profile dropdown */}
-            {/* <ProfileButton /> */}
-          {/* </div> */}
         </div>
       </div>
 
