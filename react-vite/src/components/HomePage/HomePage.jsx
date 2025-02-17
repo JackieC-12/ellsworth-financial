@@ -73,21 +73,8 @@ function HomePage() {
             </div>
           </div>
           </div>
-          {/* <div className="bg-white mt-16 pb-32">
-            <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl pt-20 mx-auto max-w-7xl px-6 lg:px-8">Explore Our Services</p>
-              <dl className="pt-8 pb-6 grid grid-cols-2 gap-8 sm:mt-20 bg-white mx-auto max-w-7xl px-6 border-t border-gray-200">
-                {links.map((link) => (
-                  <div key={link.name} className="flex flex-col-reverse gap-1 rounded-lg px-3 shadow-xs">
-                    <a className="text-base/7" href={link.href}>
-                        Learn More
-                    </a>
-                    <dd className="">{link.desc}</dd>
-                    <dt className="text-base/7">{link.name}</dt>
-                  </div>
-                ))}
-              </dl>
-          </div> */}
-          </div>
+
+        </div>
       )
 }
 

@@ -66,11 +66,6 @@ function Navigation() {
               </div>
             </div>
           </div>
-            {/* <div className="justify-self-center px-4">
-              <a href='/schedule'>
-                <button>Schedule a Meeting</button>
-              </a>
-            </div> */}
             <div className="justify-self-center">
               <a href='https://app.rightcapital.com/account/login'>
                 <button>Log In</button>
@@ -101,6 +96,4 @@ function Navigation() {
   );
 }
 
-{/* <NavLink to="/"><img src='/logo.jpg'/></NavLink> */}
-{/* <ProfileButton /> */}
 export default Navigation;

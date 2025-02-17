@@ -1,3 +1,8 @@
+// const api_key = process.env.REACT_APP_MAP_KEY
+
+// const embed = `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJe92A7meBTYcRa9dGTQyS0UY&key=${api_key}`
+// console.log(embed)
+
 function ContactUsPage() {
     return (
         <div className="py-24 sm:py-32">
@@ -8,7 +13,6 @@ function ContactUsPage() {
                         <p className="mt-6 text-lg/8 text-gray-600">At Ellsworth Financial, we specialize in foundational family finance, offering a range of services designed to protect and grow your wealth.
                             Our team of experienced professionals is committed to providing personalized strategies that align with your financial objectives. We believe
                             in building long-term relationships with our clients, ensuring that your financial plans evolve with your changing needs.</p>
-                        {/* <p className="mt-12 text-xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl">Ellsworth Financial</p> */}
                         <div className="mt-12">
                             <p className="text-lg/8 text-gray-800">
                                     472 E Elm St
@@ -28,10 +32,13 @@ function ContactUsPage() {
                             </a>
                         </div>
                             <a href="mailto:placeholder@gmail.com" className="text-lg/8 text-gray-800 hover:text-blue-600">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder@gmail.com</a>
+                            <br />
+                            <br />
+                            <a href="/schedule" className="text-xl hover:text-blue-600">Contact Ellsworth Financial</a>
                     </div>
 
                     <div className="mt-16">
-                    <iframe width="600" height="450" style={{ border:0 }} allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJe92A7meBTYcRa9dGTQyS0UY&key=AIzaSyCbQmMzlsKr051DCIstrmpkdl63TnIlzqc"></iframe>
+                    <iframe width="600" height="450" style={{ border:0 }} allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

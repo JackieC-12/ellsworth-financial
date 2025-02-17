@@ -12,6 +12,11 @@ from .config import Config
 
 app = Flask(__name__, static_folder='../react-vite/dist', static_url_path='/')
 
+api_key = os.environ.get("REACT_APP_MAP_KEY")
+
+embed = f'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJe92A7meBTYcRa9dGTQyS0UY&key={api_key}'
+
+
 # Setup login manager
 login = LoginManager(app)
 login.login_view = 'auth.unauthorized'
@@ -84,6 +89,16 @@ def react_root(path):
     if path == 'favicon.ico':
         return app.send_from_directory('public', 'favicon.ico')
     return app.send_static_file('index.html')
+
+# @app.route('/contact-us')
+# def contact_us():
+#     """
+
+#     """
+#     api_key = os.environ.get("REACT_APP_MAP_KEY")
+#     embed = f'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJe92A7meBTYcRa9dGTQyS0UY&key={api_key}'
+
+#     return f'<iframe width="600" height="450" style={{ border:0 }} allowfullscreen src={embed}></iframe>'
 
 
 @app.errorhandler(404)
