@@ -6,7 +6,6 @@ import configureStore from "./redux/store";
 import { router } from "./router";
 import * as sessionActions from "./redux/session";
 import "./index.css";
-import {APIProvider} from '@vis.gl/react-google-maps'
 
 const store = configureStore();
 

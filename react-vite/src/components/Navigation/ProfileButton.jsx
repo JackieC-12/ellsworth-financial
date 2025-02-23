@@ -1,91 +1,91 @@
-import { useState, useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { FaUserCircle } from 'react-icons/fa';
-import { thunkLogout } from "../../redux/session";
-import OpenModalMenuItem from "./OpenModalMenuItem";
-import LoginFormModal from "../LoginFormModal";
-import SignupFormModal from "../SignupFormModal";
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+// import { useState, useEffect, useRef } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { FaUserCircle } from 'react-icons/fa';
+// import { thunkLogout } from "../../redux/session";
+// import OpenModalMenuItem from "./OpenModalMenuItem";
+// import LoginFormModal from "../LoginFormModal";
+// import SignupFormModal from "../SignupFormModal";
+// import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 
-function ProfileButton() {
-  const dispatch = useDispatch();
-  const [showMenu, setShowMenu] = useState(false);
-  const user = useSelector((store) => store.session.user);
-  const ulRef = useRef();
+// function ProfileButton() {
+//   const dispatch = useDispatch();
+//   const [showMenu, setShowMenu] = useState(false);
+//   const user = useSelector((store) => store.session.user);
+//   const ulRef = useRef();
 
   // const toggleMenu = (e) => {
   //   e.stopPropagation(); // Keep from bubbling up to document and triggering closeMenu
   //   setShowMenu(!showMenu);
   // };
 
-  useEffect(() => {
-    if (!showMenu) return;
+  // useEffect(() => {
+  //   if (!showMenu) return;
 
-    const closeMenu = (e) => {
-      if (ulRef.current && !ulRef.current.contains(e.target)) {
-        setShowMenu(false);
-      }
-    };
+  //   const closeMenu = (e) => {
+  //     if (ulRef.current && !ulRef.current.contains(e.target)) {
+  //       setShowMenu(false);
+  //     }
+  //   };
 
-    document.addEventListener("click", closeMenu);
+  //   document.addEventListener("click", closeMenu);
 
-    return () => document.removeEventListener("click", closeMenu);
-  }, [showMenu]);
+  //   return () => document.removeEventListener("click", closeMenu);
+  // }, [showMenu]);
 
-  const closeMenu = () => setShowMenu(false);
+  // const closeMenu = () => setShowMenu(false);
 
-  const logout = (e) => {
-    e.preventDefault();
-    dispatch(thunkLogout());
-    closeMenu();
-  };
+  // const logout = (e) => {
+  //   e.preventDefault();
+  //   dispatch(thunkLogout());
+  //   closeMenu();
+  // };
 
-  return (
-    <Menu as="div" className="relative ml-3">
-    <div>
-      <MenuButton className="relative flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black">
-        <span className="absolute -inset-1.5" />
-        <span className="sr-only">Open user menu</span>
-        <FaUserCircle />
-      </MenuButton>
-    </div>
-    <MenuItems
-      transition
-      className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-    >
-      <MenuItem>
-        <a
-          className="block px-4 py-2 text-sm text-gray-700 hover:cursor-pointer data-[focus]:bg-gray-100 data-[focus]:outline-none"
-        >
-        <OpenModalMenuItem
-          className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
-          itemText="Log In"
-          onItemClick={closeMenu}
-          modalComponent={<LoginFormModal />}
-           />
-        </a>
-      </MenuItem>
-      <MenuItem>
-        <a
-          className="block px-4 py-2 text-sm text-gray-700 hover:cursor-pointer data-[focus]:bg-gray-100 data-[focus]:outline-none"
-        >
-          <OpenModalMenuItem
-            itemText="Sign Up"
-            onItemClick={closeMenu}
-            modalComponent={<SignupFormModal />}
-            />
-        </a>
-      </MenuItem>
-      <MenuItem>
-        <a
-          href="#"
-          className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
-        >
-          Sign Out
-        </a>
-      </MenuItem>
-    </MenuItems>
-  </Menu>
+  // return (
+  //   <Menu as="div" className="relative ml-3">
+  //   <div>
+  //     <MenuButton className="relative flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black">
+  //       <span className="absolute -inset-1.5" />
+  //       <span className="sr-only">Open user menu</span>
+  //       <FaUserCircle />
+  //     </MenuButton>
+  //   </div>
+  //   <MenuItems
+  //     transition
+  //     className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+  //   >
+  //     <MenuItem>
+  //       <a
+  //         className="block px-4 py-2 text-sm text-gray-700 hover:cursor-pointer data-[focus]:bg-gray-100 data-[focus]:outline-none"
+  //       >
+  //       <OpenModalMenuItem
+  //         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
+  //         itemText="Log In"
+  //         onItemClick={closeMenu}
+  //         modalComponent={<LoginFormModal />}
+  //          />
+  //       </a>
+  //     </MenuItem>
+  //     <MenuItem>
+  //       <a
+  //         className="block px-4 py-2 text-sm text-gray-700 hover:cursor-pointer data-[focus]:bg-gray-100 data-[focus]:outline-none"
+  //       >
+  //         <OpenModalMenuItem
+  //           itemText="Sign Up"
+  //           onItemClick={closeMenu}
+  //           modalComponent={<SignupFormModal />}
+  //           />
+  //       </a>
+  //     </MenuItem>
+  //     <MenuItem>
+  //       <a
+  //         href="#"
+  //         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
+  //       >
+  //         Sign Out
+  //       </a>
+  //     </MenuItem>
+  //   </MenuItems>
+  // </Menu>
     // <>
     //   <button onClick={toggleMenu}>
     //     <FaUserCircle />
@@ -117,7 +117,7 @@ function ProfileButton() {
     //     </ul>
     //   )}
     // </>
-  );
-}
+//   );
+// }
 
-export default ProfileButton;
+// export default ProfileButton;

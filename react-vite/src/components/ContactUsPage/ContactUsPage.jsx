@@ -3,8 +3,6 @@
 // const embed = `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJe92A7meBTYcRa9dGTQyS0UY&key=${api_key}`
 // console.log(embed)
 
-import {APIProvider, Map} from '@vis.gl/react-google-maps'
-
 function ContactUsPage() {
 
     return (
