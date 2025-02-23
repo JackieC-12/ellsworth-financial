@@ -1,7 +1,5 @@
 function AboutPage() {
     return (
-
-
         <div className="py-24 sm:py-32 h-full">
             <div className="w-full h-full flex justify-center">
               <div className="max-w-7xl">

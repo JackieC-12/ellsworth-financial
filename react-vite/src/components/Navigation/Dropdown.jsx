@@ -8,10 +8,11 @@ function classNames(...classes) {
 
 export default function Dropdown({ item }) {
   return (
-    <Menu as="div" className="text-black-500 hover:cursor-pointer mt-1 rounded-md font-medium hover:text-blue-600">
+    <Menu as="div" className="text-black-500 hover:cursor-pointer mt-1 rounded-md font-medium hover:text-blue-600 group">
         <MenuButton className="px-4 py-2">
           {item.name}
           <ChevronDownIcon aria-hidden="true" className="inline -mr-1 size-5 text-gray-400" />
+          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
         </MenuButton>
 
       <MenuItems

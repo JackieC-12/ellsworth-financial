@@ -11,16 +11,17 @@ function classNames(...classes) {
 }
 
 const servicesOptions = [
-  { name: 'Overview', href:"/services"},
-  { name: 'Financial Planning', href:"/services/financial-planning"},
-  { name: 'Life Insurance', href:"/services/life-insurance"},
-  { name: 'Asset Management', href:"/services/asset-management"}
+  // { name: 'Overview', href:"/services"},
+  { name: 'Financial Planning', href:"/financial-planning"},
+  { name: 'Life Insurance', href:"/life-insurance"},
+  { name: 'Annuities', href:"/annuities"},
+  { name: 'Asset Management', href:"/asset-management"}
 ]
 
 const navigation = [
   { name: 'Our Firm', current: false, href:"/about"},
   { name: 'Services', current: false, href:"/services", dropdown: true, options: servicesOptions},
-  { name: 'Blog', current: false, href:"/blog"},
+  // { name: 'Blog', current: false, href:"/blog"},
   { name: 'Contact', current: false, href:"/contact-us"}
 ]
 
@@ -60,17 +61,16 @@ function Navigation() {
                     href={ item.href }
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      'text-black-500 hover:cursor-pointer mt-1', 'rounded-md px-4 py-2 font-medium', 'hover:text-blue-600'
-                    )}>{item.name}</a>
+                      'text-black-500 hover:cursor-pointer mt-1', 'rounded-md px-4 py-2 font-medium', 'hover:text-blue-600',
+                      'group'
+                    )}>
+                      {item.name}
+                      <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
                 ))}
               </div>
             </div>
           </div>
-            <div className="justify-self-center">
-              <a href='https://app.rightcapital.com/account/login'>
-                <button>Log In</button>
-              </a>
-            </div>
         </div>
       </div>
 
@@ -84,7 +84,7 @@ function Navigation() {
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
                 item.current ? 'bg-gray-900 text-white' : 'text-black-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
+                'block rounded-md px-3 py-2 text-base font-medium', 'group'
               )}
             >
               {item.name}

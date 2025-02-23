@@ -3,8 +3,11 @@ import LoginFormPage from '../components/LoginFormPage';
 import SignupFormPage from '../components/SignupFormPage';
 import AboutPage from '../components/AboutPage'
 import SchedulePage from '../components/SchedulePage'
-import ServicesPage from '../components/ServicesPage'
-import AdvisorsPage from '../components/AdvisorsPage'
+import ServicesPage from '../components/Services'
+import AnnuitiesPage from '../components/Services/AnnuitiesPage';
+import AssetManagementPage from '../components/Services/AssetManagementPage'
+import FinancialPlanningPage from '../components/Services/FinancialPlanningPage'
+import LifeInsurancePage from '../components/Services/LifeInsurancePage'
 import BlogPage from '../components/BlogPage'
 import ContactUsPage from '../components/ContactUsPage'
 import PrivacyPolicyPage from '../components/PrivacyPolicyPage'
@@ -23,51 +26,29 @@ export const router = createBrowserRouter([
         path: "/about",
         element: <AboutPage />,
       },
-      // {
-      //   path: "/education",
-      //   children: [
-      //     {
-      //       index: true,
-      //       element: <EducationPage />
-      //     },
-      //     {
-      //       path: '/education/life-insurance',
-      //       element: <LifeInsurancePage />
-      //     },
-      //     // {
-      //     //   path: '/annuities',
-      //     //   element: <AnnuitiesPage />
-      //     // },
-      //     // {
-      //     //   path: '/ira',
-      //     //   element: <IRAPage />
-      //     // },
-      //     // {
-      //     //   path: '/hsa',
-      //     //   element: <HSAPage />
-      //     // },
-      //     // {
-      //     //   path: '/structured-notes',
-      //     //   element: <StructuredNotesPage />
-      //     // },
-      //     // {
-      //     //   path: '/calculators',
-      //     //   element: <CalculatorsPage />
-      //     // }
-      //   ]
-      //   // element: <EducationPage />,
-      // },
       {
         path: "/services",
         element: <ServicesPage />
       },
       {
-        path: "/schedule",
-        element: <SchedulePage />
+        path: "/financial-planning",
+        element: <FinancialPlanningPage />
       },
       {
-        path: "/advisors",
-        element: <AdvisorsPage />
+        path: "/life-insurance",
+        element: <LifeInsurancePage />
+      },
+      {
+        path: "/annuities",
+        element: <AnnuitiesPage />
+      },
+      {
+        path: "/asset-management",
+        element: <AssetManagementPage />
+      },
+      {
+        path: "/schedule",
+        element: <SchedulePage />
       },
       {
         path: "/blog",
