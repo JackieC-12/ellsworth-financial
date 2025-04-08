@@ -41,7 +41,7 @@ function HomePage() {
             <div className="mx-auto max-w-2xl lg:mx-0 bg-white/70 rounded-lg p-4">
               <h2 className="text-5xl font-semibold tracking-tight text-center text-black sm:text-left sm:text-7xl">Foundational Family Finance</h2>
               <p className="pt-8 text-lg font-medium text-center text-pretty text-black sm:mt-8 sm:pt-0 sm:text-left sm:text-xl/8">
-              At Ellsworth Financial, we&apos;re dedicated to helping you achieve your financial goals and secure your future. With years of experience and a team of dedicated financial professionals, we&apos;re here to provide you with expert guidance and tailored solutions for your unique financial needs.
+              At Ellsworth Financial, we&apos;re dedicated to helping you achieve your financial goals and secure your future. With years of experience and a team of dedicated financial professionals, we&apos;re here to provide you with professional guidance and tailored solutions for your unique financial needs.
               </p>
             </div>
             <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">

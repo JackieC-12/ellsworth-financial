@@ -9,11 +9,19 @@ function AboutPage() {
               </p>
 
               <p className="mt-6 text-xl/9 text-gray-600">
-              At Ellsworth Financial, we specialize in foundational family finance, offering a range of services designed to protect and grow your wealth.
+              At Ellsworth Financial, we concentrate in foundational family finance, offering a range of services designed to protect and grow your wealth.
               Our team of experienced professionals is committed to providing personalized strategies that align with your financial objectives. We believe in
               building long-term relationships with our clients, ensuring that your financial plans evolve with your changing needs.
               </p>
           </div>
+
+          <div className="justify-self-end bg-white">
+              <img
+                  alt="Tanner J Ellsworth Photo"
+                  src="familyA.jpg"
+                  className="mt-6 w-[48rem] sm:w-[30rem] sm:justify-self-center md:-ml-4 lg:-ml-0"
+                />
+            </div>
         </div>
       </div>
 

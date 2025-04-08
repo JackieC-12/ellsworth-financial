@@ -77,6 +77,19 @@ function Footer() {
                             <a className="text-white text-14px" href="/privacy">Privacy Policy</a>
                         </div>
                 </div>
+
+                <div className="">
+                    <p className="text-white text-sm sm:pt-0">
+                        Investment advisory services offered through Alphastar Capital Management, LLC, a SEC-registered investment
+                        adviser.  SEC registration does not constitute an endorsement of the firm by the SEC nor does it indicate
+                        that the adviser has attained a particular level of skill or ability.  Fixed insurance products are
+                        offered through Ellsworth Financial, and Alphastar Capital Management is not involved in the offer,
+                        recommendation, sale or management of commission-based fixed Insurance products. Alphastar Capital Management
+                        and Ellsworth Financial are separate and independent entities. This is for informational purposes
+                        only and is not intended as legal, tax or investment advice or a recommendation of any particular security,
+                        investment product or investment strategy.
+                        </p>
+                </div>
             </div>
         </div>
     )

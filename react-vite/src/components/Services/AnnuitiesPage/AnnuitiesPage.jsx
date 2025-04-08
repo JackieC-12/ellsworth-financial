@@ -1,17 +1,17 @@
 function AnnuitiesPage() {
-    return (
+  return (
       <div className="pt-24 sm:pt-32 h-full">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-24">
-        <div className="mx-auto grid max-w-2xl gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div className="max-w-xl text-center sm:text-left">
-              <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-              Our Firm
+        <div className="mx-auto max-w-2xl gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none">
+          <div className="sm:text-left">
+              <p className="text-center text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+              Annuities
               </p>
 
-              <p className="mt-6 text-xl/9 text-gray-600">
-              At Ellsworth Financial, we specialize in foundational family finance, offering a range of services designed to protect and grow your wealth.
-              Our team of experienced professionals is committed to providing personalized strategies that align with your financial objectives. We believe in
-              building long-term relationships with our clients, ensuring that your financial plans evolve with your changing needs.
+              <p className="mt-6 text-xl/9 text-gray-600 text-center">
+              Ensure a steady income stream during your retirement years with our annuity products.
+              We offer high-bonus lump-sum options designed to secure your long-term retirement funds.
+              Our annuities provide financial stability, allowing you to enjoy your retirement without financial worries.
               </p>
           </div>
         </div>
@@ -21,36 +21,72 @@ function AnnuitiesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="max-w-xl text-center sm:text-left">
-              <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Our Mission</p>
+              <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">What Can You Expect?</p>
 
-              <p className="mt-6 text-xl/9 text-gray-700">We empower individuals and families to achieve financial independence through innovative and
-                 tax-efficient strategies. We strive to provide education and guidance that enable our clients to make informed decisions about
-                 their financial futures. We envision a future where our clients enjoy financial security and peace of mind, knowing that their wealth
-                is protected and positioned for growth. Our goal is to be a trusted partner in your financial journey, helping
-                you navigate the complexities of wealth management with confidence.
+              <p className="mt-6 text-xl/9 text-gray-700">Vitae egestas sagittis dictum, lacus mattis quam.
+              Gravida auctor etiam facilisis praesent at vel vel. Sollicitudin torquent mauris at neque vel
+               imperdiet. Quam metus metus per sodales finibus himenaeos vestibulum cubilia. Pretium
+               praesent per blandit rutrum inceptos malesuada, taciti tellus. Proin hac non ipsum dapibus class ac.
+                Platea senectus class mi libero aptent viverra aliquam sagittis consequat.
               </p>
+
+              <p className="mt-6 text-xl/9 text-gray-700">Ac mattis et natoque convallis cras rutrum aliquet. Class taciti semper imperdiet fermentum sit?
+                Penatibus inceptos diam ut quis venenatis litora volutpat. Suscipit at nisl taciti malesuada ullamcorper primis sem mollis placerat.
+              </p>
+
+              <p className="mt-6 text-xl/9 text-gray-700">
+              Torquent vestibulum imperdiet purus maecenas aptent aptent enim ligula sed.
+              Montes habitasse scelerisque pulvinar eget pellentesque pulvinar. Sapien urna lacinia parturient non sollicitudin pretium mollis.
+              Consequat purus fusce tempor molestie convallis eget. Commodo neque litora est cubilia vulputate vivamus hendrerit.
+              </p>
+
             </div>
 
-            <div className="max-w-xl pl-4">
-            <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center sm:text-left">What We Value</p>
-            <ul className=" pl-4 mt-6 list-disc text-lg/8 text-gray-700">
-                <li>
-                  <p className="text-pretty text-gray-900 text-xl font-semibold ">Integrity</p>
-                  <p className="py-4">We uphold the highest standards of honesty and transparency in all our interactions.</p>
-                </li>
-                <li>
-                  <p className="text-pretty text-gray-900 text-xl font-semibold ">Client-Centricity</p>
-                  <p className="py-4">Your financial well-being is our top priority. We tailor our services to meet your specific needs and goals.</p>
-                </li>
-                <li>
-                  <p className="text-pretty text-gray-900 text-xl font-semibold ">Innovation</p>
-                  <p className="py-4">We leverage cutting-edge financial strategies to provide effective solutions for our clients.</p>
-                </li>
-                <li>
-                  <p className="text-pretty text-gray-900 text-xl font-semibold ">Education</p>
-                  <p className="py-4">We believe in empowering our clients with knowledge, enabling them to make informed financial decisions.</p>
-                </li>
-              </ul>
+            <div className="justify-self-end">
+            <img
+                alt="Tanner J Ellsworth Photo"
+                src="familyB.png"
+                className="mt-6 w-[48rem] sm:w-[30rem] sm:justify-self-center md:-ml-4 lg:-ml-0"
+              />
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-sky-800/90 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto grid max-w-2xl gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+
+          <div className="">
+            <img
+                alt="Tanner J Ellsworth Photo"
+                src="familyC.jpg"
+                className="mt-6 w-[48rem] sm:w-[30rem] sm:justify-self-center md:-ml-4 lg:-ml-0"
+              />
+          </div>
+
+            <div className="max-w-xl text-center sm:text-left text-white justify-self-end">
+              <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-white">Our Plan</p>
+
+              <p className="mt-6 text-xl/9">Vitae egestas sagittis dictum, lacus mattis quam.
+              Gravida auctor etiam facilisis praesent at vel vel. Sollicitudin torquent mauris at neque vel
+               imperdiet. Quam metus metus per sodales finibus himenaeos vestibulum cubilia. Pretium
+               praesent per blandit rutrum inceptos malesuada, taciti tellus. Proin hac non ipsum dapibus class ac.
+                Platea senectus class mi libero aptent viverra aliquam sagittis consequat.
+              </p>
+
+              <p className="mt-6 text-xl/9">Ac mattis et natoque convallis cras rutrum aliquet. Class taciti semper imperdiet fermentum sit?
+                Penatibus inceptos diam ut quis venenatis litora volutpat. Suscipit at nisl taciti malesuada ullamcorper primis sem mollis placerat.
+              </p>
+
+              <p className="mt-6 text-xl/9">
+              Torquent vestibulum imperdiet purus maecenas aptent aptent enim ligula sed.
+              Montes habitasse scelerisque pulvinar eget pellentesque pulvinar. Sapien urna lacinia parturient non sollicitudin pretium mollis.
+              Consequat purus fusce tempor molestie convallis eget. Commodo neque litora est cubilia vulputate vivamus hendrerit.
+              </p>
+
             </div>
 
 
@@ -61,22 +97,17 @@ function AnnuitiesPage() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24">
         <div className="mx-auto max-w-2xl gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none">
           <div className="text-center">
-            <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Our Approach</p>
+            <p className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Talk to a Professional Today</p>
 
-            <p className="mt-6 text-xl/9 text-gray-600"> Our goal is not only to position you for success in achieving your financial
-                objectives but also to provide you with a comprehensive investment plan
-                that you can feel confident in, even during the inevitable market
-                fluctuations. We accomplish this through an evidence-based strategy
-                focused on smart diversification, low investment costs, and risk
-                minimization. Together, we create a tailored investment strategy designed
-                to meet your unique goals. Once the strategy is in place, we continue to
-                monitor and fine-tune your portfolio with active management, rebalancing,
-                and tax-loss harvesting as needed to keep it aligned with your objectives.</p>
+            <p className="pt-16">
+
+             <a href="/schedule" className="text-2xl rounded-3xl bg-blue-600 px-5 py-3 font-semibold text-white shadow-xs hover:bg-gray-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Schedule Meeting</a>
+            </p>
           </div>
         </div>
       </div>
   </div>
-    )
-  }
+  )
+}
 
 export default AnnuitiesPage
